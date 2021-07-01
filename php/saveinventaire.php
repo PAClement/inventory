@@ -46,11 +46,11 @@
 
 	foreach($array_main as $key=>$array){
 
-       // $db->query("INSERT INTO inventaire_'.$id_tag.' (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
+       $db->query("INSERT INTO inventaire_'.$id_tag.' (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
 
 	}
 
-    //header('location:../resume');
+    header('location:../resume');
 
     exit;
 ?>
