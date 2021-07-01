@@ -1,0 +1,193 @@
+.index--infos{
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	line-height: 140%;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+.index--contenus-infos{
+	margin: 0 20% 0 20%;
+	padding: 1%;
+}
+
+.index--contain-input{
+	margin: 5% 0% 3% 25%;
+	height: auto;
+}
+
+/*==================
+INPUT
+==================*/
+
+.index--input{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.index--input-single{
+	margin: 0 0 1% 0;
+}
+
+input{
+	outline: none;
+	border:2px solid hsl(0 0% 93%);
+	background: hsl(0 0% 93%);
+	border-radius: .25rem;
+	padding: .75rem 1rem;
+	font-size: 2em;
+	transition: all 0.4s;
+}
+
+.input--element{
+	width: 15em;
+	margin: 0 3% 0 0;
+}
+
+.input--quantite{
+	width: 6em;
+}
+
+input:hover{
+	border:2px solid #E65100;
+	transition: all 0.4s;
+}
+
+/*========================
+BTN
+=========================*/
+.index--button{
+	display: flex;
+	justify-content: center;
+	margin: 3% 0 0% 0;
+}
+
+
+
+/*===================================*/
+
+.btn-submit{
+	margin-top: 5%;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	background: #E65100;;
+	padding: 0 5% 0 5%;
+	cursor: pointer;
+	color: white;
+	transition: all 0.4s;
+	padding: 1%;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+}
+
+.btn-ajout{
+	margin: 1% 1% 0 0 ;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	background: #388E3C;
+	padding: .75rem 1rem;
+	cursor: pointer;
+	color: white;
+	padding: 1%;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	transition: all 0.4s;
+}
+
+.btn-supprimer{
+	border: none;
+	outline: none;
+	font-size: 1em;
+	background: #B71C1C;
+	padding: 1%;
+	cursor: pointer;
+	color: white;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	transition: all 0.4s;
+}
+
+.btn-supprimer:hover{
+	transition: all 0.4s;
+	background: #C62828;
+}
+
+.btn-ajout:hover{
+	transition: all 0.4s;
+	background: #43A047;
+}
+
+.btn-submit:hover{
+	transition: all 0.4s;
+	background: #EF6C00;
+}
+
+button{	
+	box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.75);
+	transition: all 0.4s;
+}
+
+button:hover{
+	box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.75);
+	transition: all 0.4s ;	
+}
+
+
+
+/*===================================*/
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 2px;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+.btn-1 {
+	border: 2px solid #E65100;
+	color: #fff;
+}
+
+
+.btn-1a:hover,
+.btn-1a:active {
+	color: black;
+	font-weight: 900;
+	background: rgba(180,180,180,0.7);
+}

@@ -1,0 +1,20 @@
+.footer--hr{
+	background: #E65100;
+	margin: 5% 10% 3% 10%;
+	height: 1px;
+}
+
+.footer--contain{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 2%;
+}
+
+.footer--infos{
+	font-size: 1.2rem;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	color: white;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

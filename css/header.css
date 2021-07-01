@@ -1,0 +1,38 @@
+.header--title{
+	font-size: 5rem;
+	text-align: center;
+	margin: 1% 0 3% 0;
+	letter-spacing: 2px;
+	font-family: 'Josefin Sans', sans-serif;
+	color:#E65100;
+}
+
+.header--slogan{
+	font-size: 2rem;
+	text-align: center;
+	margin: 3%;
+	font-style: italic;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+.header--hr{
+	height: 2px;
+	background: #E65100;
+	margin: 0 25% 3% 25%;
+}
+
+/*=========LOGO===========*/
+
+.header--logo-placement{
+	display: flex;
+	justify-content: center;
+	margin-top: 1%;
+}
+
+.header--logo{
+	height: 120px;
+	width: 120px;
+}
+

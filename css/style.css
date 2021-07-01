@@ -1,0 +1,15 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+	background:url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
