@@ -1,5 +1,5 @@
 <?php
-	$id_tag = uniqid("inv_", true);
+	$id_tag = str_replace("." , "" , uniqid("inv_", true));
 ?>
 <!DOCTYPE html>
 <html>

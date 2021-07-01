@@ -34,11 +34,7 @@
     
     array_shift($array_main);
 
-    echo '<pre>';
-    print_r($array_main);
-    echo '</pre>';
-
-    $db->query("CREATE TABLE IF NOT EXISTS .'$id_tag'. (
+    $db->query("CREATE TABLE IF NOT EXISTS $id_tag (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 contain VARCHAR(30) NOT NULL,
                 quantite INT NOT NULL
@@ -46,7 +42,7 @@
 
 	foreach($array_main as $key=>$array){
 
-       $db->query("INSERT INTO inventaire_'.$id_tag.' (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
+       $db->query("INSERT INTO $id_tag (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
 
 	}
 
