@@ -13,7 +13,6 @@
 
 </head>
 
-
 <body>
 
     <?php include('includes/header.php'); ?>
@@ -44,26 +43,30 @@
 	<form id="form" action="php/saveinventaire.php" method="POST">
 	<input type="hidden" name="id_tag" value="<?php echo $id_tag; ?>">
 			<div id="id__1"  class="index--input-single">
-				<input class="input--element" name="1__nom" type="text" placeholder="Contain" required />
-				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité" min="0" />
+				<input class="input--element" name="1__nom" type="text" placeholder="Contain" required/>
+				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité" min="0" required/>
 			</div>
 
 			<div id="id__2"  class="index--input-single">
-				<input class="input--element" name="2__nom" type="text" placeholder="Contain"  />
-				<input class="input--quantite" name="2__quantite" type="number" placeholder="Quantité" min="0" />
+				<input class="input--element" name="2__nom" type="text" placeholder="Contain"  required/>
+				<input class="input--quantite" name="2__quantite" type="number" placeholder="Quantité" min="0" required/>
 			</div>
 
 			<div id="id__3"  class="index--input-single">
-				<input class="input--element" name="3__nom" type="text" placeholder="Contain" />
-				<input class="input--quantite" name="3__quantite" type="number" placeholder="Quantité" min="0" />
+				<input class="input--element" name="3__nom" type="text" placeholder="Contain" required/>
+				<input class="input--quantite" name="3__quantite" type="number" placeholder="Quantité" min="0" required/>
 			</div>
 
 			<div id="add"></div>
 
 			<button type="submit" class="btn-submit">Créer votre Inventaire</button>
 	</form>
+		<div id="add_button" >
+			<br><br><br><br><br>
+			<button class="btn-ajout" onclick="fAddText()">+ Ajouter un emplacement</button>
+			<button class="btn-supprimer" onclick="fDelText()">- Supprimer un emplacement</button>
+		</div>
 	</div>
-
 	
     <?php include('includes/footer.php'); ?>
 
@@ -72,16 +75,21 @@
 	<script>
 
 		//document.querySelector("#nbr").innerHTML='3 entrées';
+		document.querySelector('#add_button').style.display ='none' ;
 		let i = 3;
 
 		function fAddText() {
 
 			i = i+1;
 			let contenu = document.querySelector('#add').innerHTML;
-			contenu = contenu + '<div id="id__'+i+'" class="index--input-single"> <input class="input--element" name="'+i+'__nom" type="text" placeholder="Contain"/> <input class="input--quantite" name="'+i+'__quantite" type="number" placeholder="Quantité" min="0" /> </div>';
+			contenu = contenu + '<div id="id__'+i+'" class="index--input-single"> <input class="input--element" name="'+i+'__nom" type="text" placeholder="Contain" required/> <input class="input--quantite" name="'+i+'__quantite" type="number" placeholder="Quantité" min="0" required/> </div>';
 			document.querySelector('#add').innerHTML = contenu;
 
 			//document.querySelector("#nbr").innerHTML=''+i+' entrées'; NOMBRE D'INPUT
+
+			if(i >= 10){
+				document.querySelector('#add_button').style.display ='block' ;
+			}
 			return i;
 		}
 
@@ -93,6 +101,10 @@
 				x.remove();
 
 				i--;
+
+				if( i < 10 ){
+					document.querySelector('#add_button').style.display ='none' ;
+				}
 				//document.querySelector("#nbr").innerHTML=''+i+' entrées'; NOMBRE D'INPUT
 				return i;
 			}
