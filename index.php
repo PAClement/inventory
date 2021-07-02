@@ -44,7 +44,7 @@
 	<input type="hidden" name="id_tag" value="<?php echo $id_tag; ?>">
 			<div id="id__1"  class="index--input-single">
 				<input class="input--element" name="1__nom" type="text" placeholder="Contain" required/>
-				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité" min="0" required/>
+				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité"  required/>
 			</div>
 
 			<div id="id__2"  class="index--input-single">

@@ -13,7 +13,17 @@
 
     $id_tag = $_SESSION["id_tag"];
 
-    $sql = $db->query("SELECT * FROM $id_tag ");
+    unset($_SESSION["id_tag"]);
+
+    if(isset($id_tag)){
+
+        $sql = $db->query("SELECT * FROM $id_tag ");
+
+    }else{
+
+        header('location:index');
+    }
+   
 ?>
 
 <!DOCTYPE html>

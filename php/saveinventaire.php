@@ -16,7 +16,6 @@
     $_SESSION["id_tag"] = $id_tag;
 
     $_POST = array_map("htmlspecialchars", $_POST);
-    $_POST = array_filter($_POST);
 
     $array_main = array();
 
@@ -42,7 +41,7 @@
                 quantite INT(6)
         )");
 
-	foreach($array_main as $key=>$array){
+	foreach($array_main as $array){
 
        $db->query("INSERT INTO $id_tag (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
 
