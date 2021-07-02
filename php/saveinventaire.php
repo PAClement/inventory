@@ -1,5 +1,5 @@
 <?php 
-       
+    session_start();
     //Détection des erreurs
 
     ini_set('display_errors', 1);
@@ -12,6 +12,8 @@
     $db = new Connection();
 
     $id_tag = htmlspecialchars($_POST["id_tag"]);
+
+    $_SESSION["id_tag"] = $id_tag;
 
     $_POST = array_map("htmlspecialchars", $_POST);
     $_POST = array_filter($_POST);
@@ -37,7 +39,7 @@
     $db->query("CREATE TABLE IF NOT EXISTS $id_tag (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 contain VARCHAR(30) NOT NULL,
-                quantite INT NOT NULL
+                quantite INT(6)
         )");
 
 	foreach($array_main as $key=>$array){

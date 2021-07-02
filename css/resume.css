@@ -1,0 +1,90 @@
+
+th {
+    font-size: 2em;
+    font-family: 'Dosis', sans-serif;
+    color:white;
+}
+
+tr{
+    text-align: center;
+}
+
+td {
+   font-size: 2em;
+   font-family: 'Dosis', sans-serif;
+   color:white;
+}
+
+caption {
+    font-size: 3em;
+    caption-side: top;
+    font-family: 'Dosis', sans-serif;
+    color:#E65100;
+    letter-spacing: 1px;
+
+    margin-bottom: 1.5em;
+}
+
+table {
+
+    width: 50%;
+    
+}
+
+.resume--table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume--load{
+    margin: 5% 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*========================
+BTN
+=========================*/
+
+.btn {
+	border: none;
+	font-family: 'Dosis', sans-serif;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	transition: all 0.3s;
+}
+
+/*-------------------------------*/
+
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* Button 1a */
+.btn-1a:hover,
+.btn-1a:active {
+	color:#fff;
+    border: 3px solid #E65100;
+
+}

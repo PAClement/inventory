@@ -61,7 +61,7 @@
 
 			<button type="submit" class="btn-submit">Créer votre Inventaire</button>
 	</form>
-		<div id="add_button" >
+		<div id="add_button">
 			<br><br><br><br><br>
 			<button class="btn-ajout" onclick="fAddText()">+ Ajouter un emplacement</button>
 			<button class="btn-supprimer" onclick="fDelText()">- Supprimer un emplacement</button>
@@ -74,7 +74,6 @@
 
 	<script>
 
-		//document.querySelector("#nbr").innerHTML='3 entrées';
 		document.querySelector('#add_button').style.display ='none' ;
 		let i = 3;
 
@@ -84,9 +83,7 @@
 			let contenu = document.querySelector('#add').innerHTML;
 			contenu = contenu + '<div id="id__'+i+'" class="index--input-single"> <input class="input--element" name="'+i+'__nom" type="text" placeholder="Contain" required/> <input class="input--quantite" name="'+i+'__quantite" type="number" placeholder="Quantité" min="0" required/> </div>';
 			document.querySelector('#add').innerHTML = contenu;
-
-			//document.querySelector("#nbr").innerHTML=''+i+' entrées'; NOMBRE D'INPUT
-
+			
 			if(i >= 10){
 				document.querySelector('#add_button').style.display ='block' ;
 			}
@@ -99,13 +96,11 @@
 
 				const x = document.querySelector('#id__'+i+'');
 				x.remove();
-
 				i--;
-
 				if( i < 10 ){
 					document.querySelector('#add_button').style.display ='none' ;
 				}
-				//document.querySelector("#nbr").innerHTML=''+i+' entrées'; NOMBRE D'INPUT
+				
 				return i;
 			}
 		} 
