@@ -41,7 +41,10 @@
 	<br><br><br><br><br>
 
 	<form id="form" action="php/saveinventaire.php" method="POST">
+	
 	<input type="hidden" name="id_tag" value="<?php echo $id_tag; ?>">
+		<div id="papa">
+
 			<div id="id__1"  class="index--input-single">
 				<input class="input--element" name="1__nom" type="text" placeholder="Contain" required/>
 				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité"  required/>
@@ -57,7 +60,7 @@
 				<input class="input--quantite" name="3__quantite" type="number" placeholder="Quantité" min="0" required/>
 			</div>
 
-			<div id="add"></div>
+		</div>
 
 			<button type="submit" class="btn-submit">Créer votre Inventaire</button>
 	</form>
@@ -80,9 +83,15 @@
 		function fAddText() {
 
 			i = i+1;
-			let contenu = document.querySelector('#add').innerHTML;
-			contenu = contenu + '<div id="id__'+i+'" class="index--input-single"> <input class="input--element" name="'+i+'__nom" type="text" placeholder="Contain" required/> <input class="input--quantite" name="'+i+'__quantite" type="number" placeholder="Quantité" min="0" required/> </div>';
-			document.querySelector('#add').innerHTML = contenu;
+			let parent = document.querySelector('#papa');
+			let child = document.createElement('div');
+
+			child.id = 'id__'+i;
+			child.classList.add('index--input-single');
+
+			child.innerHTML = '<input class="input--element" name="'+i+'__nom" type="text" placeholder="Contain" required/> <input class="input--quantite" name="'+i+'__quantite" type="number" placeholder="Quantité" min="0" required/>';
+
+			parent.append(child);
 			
 			if(i >= 10){
 				document.querySelector('#add_button').style.display ='block' ;
