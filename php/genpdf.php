@@ -14,7 +14,7 @@ $bdd_table = htmlspecialchars($_POST['id_tag']);
 $sql = $db->query("SELECT * FROM $bdd_table ");
 
 ob_start();
-require_once '../pdf-content.php';
+require_once '../action/pdf-content.php';
 $html = ob_get_contents();
 ob_end_clean();
 

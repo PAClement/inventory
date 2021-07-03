@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
 	
     <!--CSS-->
-    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="../css/resume.css">
 
     <style>
 

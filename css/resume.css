@@ -6,7 +6,7 @@ th {
 }
 
 tr{
-    text-align: center;
+    text-align: left;
 }
 
 td {
@@ -23,6 +23,7 @@ caption {
     letter-spacing: 1px;
 
     margin-bottom: 1.5em;
+    text-align: left;
 }
 
 table {
@@ -43,6 +44,11 @@ table {
 
     display: flex;
     flex-direction: column;
+}
+
+.center_btn{
+    display: flex;
+    justify-content: center;
 }
 
 /*========================
@@ -87,4 +93,42 @@ BTN
 	color:#fff;
     border: 3px solid #E65100;
 
+}
+
+/*==================
+INPUT
+==================*/
+
+.index--input{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.index--input-single{
+	margin: 0 0 1% 0;
+}
+
+td input{
+	outline: none;
+	border:2px solid hsl(0 0% 93%);
+	background: hsl(0 0% 93%);
+	border-radius: .25rem;
+	padding: .50rem 0.5rem;
+	font-size: 1em;
+	transition: all 0.4s;
+}
+
+.input--element{
+	width: 15em;
+	margin: 0 3% 0 0;
+}
+
+.input--quantite{
+	width: 6em;
+}
+
+input:hover{
+	border:2px solid #E65100;
+	transition: all 0.4s;
 }
