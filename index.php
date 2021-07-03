@@ -50,16 +50,6 @@
 				<input class="input--quantite" name="1__quantite" type="number" placeholder="Quantité"  required/>
 			</div>
 
-			<div id="id__2"  class="index--input-single">
-				<input class="input--element" name="2__nom" type="text" placeholder="Contain"  required/>
-				<input class="input--quantite" name="2__quantite" type="number" placeholder="Quantité" min="0" required/>
-			</div>
-
-			<div id="id__3"  class="index--input-single">
-				<input class="input--element" name="3__nom" type="text" placeholder="Contain" required/>
-				<input class="input--quantite" name="3__quantite" type="number" placeholder="Quantité" min="0" required/>
-			</div>
-
 		</div>
 
 			<button type="submit" class="btn-submit">Créer votre Inventaire</button>
@@ -78,7 +68,7 @@
 	<script>
 
 		document.querySelector('#add_button').style.display ='none' ;
-		let i = 3;
+		let i = 1;
 
 		function fAddText() {
 
