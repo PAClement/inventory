@@ -9,25 +9,31 @@ use Dompdf\Dompdf;
 include('CBDD.php');
 $db = new Connection();
 
-$bdd_table = htmlspecialchars($_POST['id_tag']);
+if(isset($_POST['id_tag'])){
 
-$sql = $db->query("SELECT * FROM $bdd_table ");
+    $bdd_table = htmlspecialchars($_POST['id_tag']);
 
-ob_start();
-require_once '../action/pdf-content.php';
-$html = ob_get_contents();
-ob_end_clean();
+    $sql = $db->query("SELECT * FROM $bdd_table ");
 
-require_once 'dompdf/autoload.inc.php';
+    ob_start();
+    require_once '../action/pdf-content.php';
+    $html = ob_get_contents();
+    ob_end_clean();
 
-$dompdf = new Dompdf();
+    require_once 'dompdf/autoload.inc.php';
 
-$dompdf->loadHtml($html);
+    $dompdf = new Dompdf();
 
-$dompdf->setPaper('A4', 'portrait');
+    $dompdf->loadHtml($html);
 
-$dompdf->render();
+    $dompdf->setPaper('A4', 'portrait');
 
-$fichier = 'Inventaire.pdf';
-$dompdf->stream($fichier);
+    $dompdf->render();
 
+    $fichier = 'Inventaire.pdf';
+    $dompdf->stream($fichier);
+}else{
+    header('location:../index');
+}
+
+?>
