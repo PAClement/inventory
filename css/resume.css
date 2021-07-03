@@ -109,6 +109,16 @@ INPUT
 	margin: 0 0 1% 0;
 }
 
+form input{
+	outline: none;
+	border:2px solid hsl(0 0% 93%);
+	background: hsl(0 0% 93%);
+	border-radius: .25rem;
+	padding: .50rem 0.5rem;
+	font-size: 1em;
+	transition: all 0.4s;
+}
+
 td input{
 	outline: none;
 	border:2px solid hsl(0 0% 93%);
@@ -131,4 +141,45 @@ td input{
 input:hover{
 	border:2px solid #E65100;
 	transition: all 0.4s;
+}
+
+.btn-inv-pdf{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#form_pdf input{
+	margin: 0;
+}
+
+/*-----------------------
+BTN DL
+--------------------------*/
+
+/* Button 2 */
+.btn-2 {
+	background: rgba(0,0,0,0);
+	color: #fff;
+	box-shadow: 0 6px white;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border: 3px solid white;
+}
+
+/* Button 2a */
+.btn-2a {
+	border-radius: 0 0 5px 5px;
+}
+
+.btn-2a:hover {
+	box-shadow: 0 4px #E65100;
+	top: 2px;
+}
+
+.btn-2a:active {
+	box-shadow: 0 0 #E65100;
+	top: 6px;
 }

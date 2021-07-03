@@ -92,7 +92,7 @@
 
     <div class="resume--table">
         <table>
-            <caption>Mon inventaire</caption>
+            <caption><?php echo $nom_inv; ?></caption>
                 <tr>
                     <th scope="col">CONTAIN</th>
                     <th scope="col">QUANTITÉ</th>

@@ -12,6 +12,7 @@ $db = new Connection();
 if(isset($_POST['id_tag'])){
 
     $bdd_table = htmlspecialchars($_POST['id_tag']);
+    $nom_inv = htmlspecialchars($_POST['nom_inv']);
 
     $sql = $db->query("SELECT * FROM $bdd_table ");
 
@@ -30,7 +31,7 @@ if(isset($_POST['id_tag'])){
 
     $dompdf->render();
 
-    $fichier = 'Inventaire.pdf';
+    $fichier = 'Inventaire_'.$nom_inv.'.pdf';
     $dompdf->stream($fichier);
 }else{
     header('location:../index');
