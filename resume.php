@@ -13,7 +13,7 @@
 
     $id_tag = $_SESSION["id_tag"];
 
-    //unset($_SESSION["id_tag"]);
+    unset($_SESSION["id_tag"]);
 
     if(isset($id_tag)){
 
@@ -21,7 +21,7 @@
 
     }else{
 
-        //header('location:index');
+        header('location:index');
     }
    
 ?>

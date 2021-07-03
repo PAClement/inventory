@@ -11,17 +11,16 @@
     include('../php/CBDD.php');
     $db = new Connection();
 
-    $id_tag = htmlspecialchars($_POST['id_table']);
+    if(isset($_POST['id_table'])){
 
-    if(isset($id_tag)){
-
+        $id_tag = htmlspecialchars($_POST['id_table']);
         $sql = $db->query("SELECT * FROM $id_tag ");
 
         $i = 0;
 
     }else{
 
-        //header('location:../index');
+        header('location:../index');
     }
    
 ?>

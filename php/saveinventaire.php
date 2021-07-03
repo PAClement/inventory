@@ -11,43 +11,49 @@
     include('CBDD.php');
     $db = new Connection();
 
-    $id_tag = htmlspecialchars($_POST["id_tag"]);
+    if(isset($_POST['id_tag'])){
 
-    $_SESSION["id_tag"] = $id_tag;
+        $id_tag = htmlspecialchars($_POST["id_tag"]);
 
-    $_POST = array_map("htmlspecialchars", $_POST);
+        $_SESSION["id_tag"] = $id_tag;
 
-    $array_main = array();
+        $_POST = array_map("htmlspecialchars", $_POST);
 
-	foreach( $_POST as $name=>$value ){
+        $array_main = array();
+
+        foreach( $_POST as $name=>$value ){
+            
+            $item = explode('__', $name)[0];
+
+            if(!isset($array_main[$item])){
+
+                $array_main[$item]=[];
+
+            }
+
+            array_push($array_main[$item], $value);
+
+        }
         
-		$item = explode('__', $name)[0];
+        array_shift($array_main);
 
-        if(!isset($array_main[$item])){
+        $db->query("CREATE TABLE IF NOT EXISTS $id_tag (
+                    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                    contain VARCHAR(30) NOT NULL,
+                    quantite INT(6)
+            )");
 
-            $array_main[$item]=[];
+        foreach($array_main as $array){
+
+        $db->query("INSERT INTO $id_tag (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
 
         }
 
-		array_push($array_main[$item], $value);
+        header('location:../resume');
 
-	}
-    
-    array_shift($array_main);
+        exit;
 
-    $db->query("CREATE TABLE IF NOT EXISTS $id_tag (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                contain VARCHAR(30) NOT NULL,
-                quantite INT(6)
-        )");
-
-	foreach($array_main as $array){
-
-       $db->query("INSERT INTO $id_tag (contain , quantite) VALUES (?, ?)" ,array($array[0],$array[1]));
-
-	}
-
-    header('location:../resume');
-
-    exit;
+    }else{
+    header('location:../index');
+    }
 ?>
