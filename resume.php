@@ -72,7 +72,7 @@
             <button type="submit" class="btn btn-1 btn-1a">- Télécharger mon inventaire (.pdf) -</button>
         </form>
 
-            <button class="btn btn-1 btn-1a">- Recevoir mon inventaire par mail -</button>
+            <!--<button class="btn btn-1 btn-1a">- Recevoir mon inventaire par mail -</button>-->
     </div>
 </div>
 
